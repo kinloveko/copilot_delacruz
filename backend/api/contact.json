@@ -1,0 +1,38 @@
+// create a 5 example data to feed my contacts.cs file with json format data
+// the properties are id, firstname, lastname, phonenumber and address only in philippines
+
+{
+  "id": 1,
+    "firstname": "Juan",
+    "lastname": "Dela Cruz",
+    "phonenumber": "09123456789",
+    "address": "Manila, Philippines"
+},
+{
+    "id": 2,
+    "firstname": "Maria",
+    "lastname": "Santos",
+    "phonenumber": "09123456789",
+    "address": "Quezon City, Philippines"
+},
+{
+    "id": 3,
+    "firstname": "Pedro",
+    "lastname": "Penduko",
+    "phonenumber": "09123456789",
+    "address": "Makati, Philippines"
+},
+{
+    "id": 4,
+    "firstname": "Juan",
+    "lastname": "Tamad",
+    "phonenumber": "09123456789",
+    "address": "Pasig, Philippines"
+},
+{
+    "id": 5,
+    "firstname": "Maria",
+    "lastname": "Makiling",
+    "phonenumber": "09123456789",
+    "address": "Taguig, Philippines"
+}
