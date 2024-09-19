@@ -47,6 +47,7 @@ namespace backend.Services
             return _mapper.Map<ReadContactDTO>(newContact);
         }
 
+
         public void DeleteContact(int id)
         {
             _jsonRepository.DeleteContact(id);
