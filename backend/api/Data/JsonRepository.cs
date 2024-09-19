@@ -10,7 +10,7 @@ namespace backend.Data
         //create a constructor that reads the contact.json file content and stores it to Contacts property
         public JsonRepository()
         {
-            string json = File.ReadAllText("contacts.json");
+            string json = File.ReadAllText("contact.json");
             Contacts = JsonSerializer.Deserialize<List<Contact>>(json);
         }
 
@@ -35,7 +35,8 @@ namespace backend.Data
         }
 
         //Create a method to update contact 
-        public void UpdateContact(Contact contact) {
+        public void UpdateContact(Contact contact)
+        {
             var existingContact = Contacts.FirstOrDefault(c => c.Id == contact.Id);
             if (existingContact != null)
             {
@@ -60,7 +61,7 @@ namespace backend.Data
         public void SaveContacts()
         {
             string json = JsonSerializer.Serialize(Contacts);
-            File.WriteAllText("contacts.json", json);
+            File.WriteAllText("contact.json", json);
         }
 
     }

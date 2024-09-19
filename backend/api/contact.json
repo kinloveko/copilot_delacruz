@@ -1,38 +1,46 @@
-// create a 5 example data to feed my contacts.cs file with json format data
-// the properties are id, firstname, lastname, phonenumber and address only in philippines
+[
+  {
+    "Id": 5,
+    "FirstName": "John",
+    "LastName": "Doe",
+    "PhoneNumber": "1234567890",
+    "Address": "1234 Elm St"
+  },
+  {
+    "Id": 6,
+    "FirstName": "Jane",
+    "LastName": "Doe",
+    "PhoneNumber": "0987654321",
+    "Address": "5678 Oak St"
+  },
+  {
+    "Id": 7,
+    "FirstName": "John",
+    "LastName": "Smith",
+    "PhoneNumber": "1231231234",
+    "Address": "1234 Pine St"
+  },
+  {
+    "Id": 8,
+    "FirstName": "Jane",
+    "LastName": "Smith",
+    "PhoneNumber": "4564564567",
+    "Address": "5678 Birch St"
+  },
+  {
+    "Id": 9,
+    "FirstName": "John",
+    "LastName": "Johnson",
+    "PhoneNumber": "7897897890",
+    "Address": "1234 Maple St"
+  },
+  {
+    "Id": 10,
+    "FirstName": "Jane",
+    "LastName": "Johnson",
+    "PhoneNumber": "6546546543",
+    "Address": "5678 Cedar St"
+  }
 
-{
-  "id": 1,
-    "firstname": "Juan",
-    "lastname": "Dela Cruz",
-    "phonenumber": "09123456789",
-    "address": "Manila, Philippines"
-},
-{
-    "id": 2,
-    "firstname": "Maria",
-    "lastname": "Santos",
-    "phonenumber": "09123456789",
-    "address": "Quezon City, Philippines"
-},
-{
-    "id": 3,
-    "firstname": "Pedro",
-    "lastname": "Penduko",
-    "phonenumber": "09123456789",
-    "address": "Makati, Philippines"
-},
-{
-    "id": 4,
-    "firstname": "Juan",
-    "lastname": "Tamad",
-    "phonenumber": "09123456789",
-    "address": "Pasig, Philippines"
-},
-{
-    "id": 5,
-    "firstname": "Maria",
-    "lastname": "Makiling",
-    "phonenumber": "09123456789",
-    "address": "Taguig, Philippines"
-}
+
+]

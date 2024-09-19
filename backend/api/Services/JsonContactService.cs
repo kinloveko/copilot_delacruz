@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿
+using AutoMapper;
 using backend.Data;
 using backend.DTOs;
 using backend.Models;
@@ -19,7 +20,7 @@ namespace backend.Services
 
         //CRUD methods from IContactServices to be implemented by utilizing the JsonRepository methods and the mapper
         public List<ReadContactDTO> GetContacts()
-        {
+        {     
             var contacts = _jsonRepository.GetContacts();
             return _mapper.Map<List<ReadContactDTO>>(contacts);
         }
