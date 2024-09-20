@@ -6,7 +6,7 @@ namespace backend.Profiles
 {
     public class ContactProfile : Profile
     {
-        //create a mapping profile for contact, and for CreateContactDto to generate an Id of type int
+        //create a mapping profile for contact, and for CreateContactDto to generate an Id of type of Guid
         public ContactProfile()
         {
 
