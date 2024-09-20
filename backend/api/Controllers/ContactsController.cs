@@ -20,35 +20,35 @@ namespace backend.Controllers
 
         //Create a read contact http get
         [HttpGet]
-        public ActionResult GetContacts()
+        public IActionResult GetContacts()
         {
             return Ok(_contactService.GetContacts());
         }
 
         //Create a get contact by id http get
         [HttpGet("{id}")]
-        public ActionResult GetContactById(int id)
+        public ActionResult GetContactById(Guid id)
         {
             return Ok(_contactService.GetContactById(id));
         }
 
         //Create a create contact http post
         [HttpPost]
-        public ActionResult AddContact(CreateContactDTO contact)
+        public IActionResult AddContact(CreateContactDTO contact)
         {
             return Ok(_contactService.AddContact(contact));
         }
 
         //Create a update contact http put
         [HttpPut]
-        public ActionResult UpdateContact(UpdateContactDTO contact)
+        public IActionResult UpdateContact(UpdateContactDTO contact)
         {
             return Ok(_contactService.UpdateContact(contact));
         }
 
         //Create a delete contact http delete
         [HttpDelete("{id}")]
-        public ActionResult DeleteContact(int id)
+        public IActionResult DeleteContact(Guid id)
         {
             _contactService.DeleteContact(id);
             return NoContent();
