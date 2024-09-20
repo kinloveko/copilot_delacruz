@@ -41,7 +41,7 @@ namespace backend.Controllers
 
         //Create a delete contact http delete
         [HttpDelete("{id}")]
-        public ActionResult DeleteContact(int id)
+        public ActionResult DeleteContact(Guid id)
         {
             _contactService.DeleteContact(id);
             return NoContent();

@@ -7,10 +7,10 @@ namespace backend.Services
     {
         // Crud methods from the JsonRepository class
         List<ReadContactDTO> GetContacts();
-        ReadContactDTO GetContactById(int id);
+        ReadContactDTO GetContactById(Guid id);
         ReadContactDTO AddContact(CreateContactDTO contact);
         ReadContactDTO UpdateContact(UpdateContactDTO contact);
-        void DeleteContact(int id);
+        void DeleteContact(Guid id);
 
     }
 }

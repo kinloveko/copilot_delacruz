@@ -25,7 +25,7 @@ namespace backend.Services
             return _mapper.Map<List<ReadContactDTO>>(contacts);
         }
 
-        public ReadContactDTO GetContactById(int id)
+        public ReadContactDTO GetContactById(Guid id)
         {
             var contact = _jsonRepository.GetContactById(id);
             return _mapper.Map<ReadContactDTO>(contact);
@@ -48,7 +48,7 @@ namespace backend.Services
         }
 
 
-        public void DeleteContact(int id)
+        public void DeleteContact(Guid id)
         {
             _jsonRepository.DeleteContact(id);
             _jsonRepository.SaveContacts();

@@ -23,7 +23,7 @@ namespace backend.Data
         }
 
         //create a method that returns a contact by id
-        public Contact GetContactById(int id)
+        public Contact GetContactById(Guid id)
         {
             return Contacts.FirstOrDefault(c => c.Id == id);
         }
@@ -48,7 +48,7 @@ namespace backend.Data
         }
 
         //create a method that deletes a contact
-        public void DeleteContact(int id)
+        public void DeleteContact(Guid id)
         {
             var contact = Contacts.FirstOrDefault(c => c.Id == id);
             if (contact != null)
