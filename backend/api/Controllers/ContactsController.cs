@@ -25,6 +25,13 @@ namespace backend.Controllers
             return Ok(_contactService.GetContacts());
         }
 
+        //Create a get contact by id http get
+        [HttpGet("{id}")]
+        public ActionResult GetContactById(Guid id)
+        {
+            return Ok(_contactService.GetContactById(id));
+        }
+
         //Create a create contact http post
         [HttpPost]
         public IActionResult AddContact(CreateContactDTO contact)
