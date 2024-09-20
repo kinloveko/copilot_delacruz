@@ -10,7 +10,7 @@ namespace backend.Profiles
         public ContactProfile() {
         
             CreateMap<Contact, ReadContactDTO>().ReverseMap();
-            CreateMap<CreateContactDTO, Contact>().ForMember(c => c.Id, opt => opt.Ignore());
+            CreateMap<CreateContactDTO, Contact>().ForMember(c => c.Id, opt => opt.Ignore()).ReverseMap();
             CreateMap<UpdateContactDTO, Contact>().ReverseMap();
         }
 
