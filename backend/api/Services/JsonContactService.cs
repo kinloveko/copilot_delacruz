@@ -19,10 +19,18 @@ namespace backend.Services
         }
 
         //CRUD methods from IContactServices to be implemented by utilizing the JsonRepository methods and the mapper
-        public List<ReadContactDTO> GetContacts()
-        {     
-            var contacts = _jsonRepository.GetContacts();
-            return _mapper.Map<List<ReadContactDTO>>(contacts);
+        public IEnumerable<ReadContactDTO> GetContacts(string searchTerm = null)
+        {
+            var filteredContacts = string.IsNullOrEmpty(searchTerm)
+                ? _jsonRepository.GetContacts()
+                : _jsonRepository.GetContacts().Where(c =>
+                    c.FirstName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                    c.LastName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                    c.PhoneNumber.Contains(searchTerm) ||
+                    c.Email.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                    c.Address.Contains(searchTerm, StringComparison.OrdinalIgnoreCase));
+
+            return _mapper.Map<IEnumerable<ReadContactDTO>>(filteredContacts);
         }
 
         public ReadContactDTO GetContactById(Guid id)
