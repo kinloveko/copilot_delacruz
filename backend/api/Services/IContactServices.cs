@@ -6,7 +6,7 @@ namespace backend.Services
     public interface IContactServices
     {
         // Crud methods from the JsonRepository class
-        List<ReadContactDTO> GetContacts();
+        IEnumerable<ReadContactDTO> GetContacts(string searchTerm = null);
         ReadContactDTO GetContactById(Guid id);
         ReadContactDTO AddContact(CreateContactDTO contact);
         ReadContactDTO UpdateContact(UpdateContactDTO contact);

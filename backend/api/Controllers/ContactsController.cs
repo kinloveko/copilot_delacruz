@@ -20,13 +20,20 @@ namespace backend.Controllers
 
         //Create a read contact http get
         [HttpGet]
-        public IActionResult GetContacts()
+        public IActionResult GetContacts([FromQuery] string searchTerm)
         {
-            return Ok(_contactService.GetContacts());
+
+            var contacts = _contactService.GetContacts(searchTerm);
+            //check if contacts length is equal to 0
+            if (contacts.Count() == 0)
+            {
+                return NotFound();
+            }
+            return Ok(contacts);
         }
 
         //Create a get contact by id http get
-        [HttpGet("{id}")]
+        [HttpGet("{id}")] 
         public ActionResult GetContactById(Guid id)
         {
             return Ok(_contactService.GetContactById(id));

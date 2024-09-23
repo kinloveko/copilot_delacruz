@@ -42,6 +42,7 @@ namespace backend.Data
             {
                 existingContact.FirstName = contact.FirstName;
                 existingContact.LastName = contact.LastName;
+                existingContact.Email = contact.Email;
                 existingContact.PhoneNumber = contact.PhoneNumber;
                 existingContact.Address = contact.Address;
             }
