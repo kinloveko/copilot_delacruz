@@ -28,8 +28,17 @@ const CreateScreen = () => {
       const newContact = await createContact(contact);
       console.log("newContact:", contact);
       setContacts((prevContacts) => [...prevContacts, newContact]);
+      if (newContact) {
+        //reset the fields TextInputs to empty
+        setContact({
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          address: "",
+        });
 
-      navigation.goBack();
+        navigation.goBack();
+      }
     } catch (error) {
       console.log(error);
     }
@@ -45,6 +54,7 @@ const CreateScreen = () => {
       <TextInput
         style={styles.input}
         placeholder="First Name"
+        value={contact.firstName}
         onChangeText={(text) => {
           handleChange(text, "firstName");
         }}
@@ -53,6 +63,7 @@ const CreateScreen = () => {
       <TextInput
         style={styles.input}
         placeholder="Last Name"
+        value={contact.lastName}
         onChangeText={(text) => {
           handleChange(text, "lastName");
         }}
@@ -61,6 +72,7 @@ const CreateScreen = () => {
       <TextInput
         style={styles.input}
         placeholder="Phone Number"
+        value={contact.phoneNumber}
         onChangeText={(text) => {
           handleChange(text, "phoneNumber");
         }}
@@ -69,6 +81,7 @@ const CreateScreen = () => {
       <TextInput
         style={styles.input}
         placeholder="Address"
+        value={contact.address}
         onChangeText={(text) => {
           handleChange(text, "address");
         }}
