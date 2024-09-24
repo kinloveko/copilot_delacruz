@@ -18,7 +18,11 @@ export default function App() {
         >
           <Tab.Screen name="List" component={ListScreen} />
           <Tab.Screen name="Create" component={CreateScreen} />
-          {/* <Tab.Screen name="Update" component={UpdateScreen} /> */}
+          <Tab.Screen
+            name="Update"
+            component={UpdateScreen}
+            options={{ tabBarButton: () => null }}
+          />
           {/* <Tab.Screen name="Delete" component={DeleteScreen} /> */}
         </Tab.Navigator>
       </NavigationContainer>

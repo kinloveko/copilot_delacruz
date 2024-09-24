@@ -17,6 +17,7 @@ const CreateScreen = () => {
   const [contact, setContact] = React.useState<CreateContact>({
     firstName: "",
     lastName: "",
+    email: "",
     phoneNumber: "",
     address: "",
   });
@@ -33,6 +34,7 @@ const CreateScreen = () => {
         setContact({
           firstName: "",
           lastName: "",
+          email: "",
           phoneNumber: "",
           address: "",
         });
@@ -66,6 +68,15 @@ const CreateScreen = () => {
         value={contact.lastName}
         onChangeText={(text) => {
           handleChange(text, "lastName");
+        }}
+      />
+      <Text style={styles.text}>Email</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+        value={contact.email}
+        onChangeText={(text) => {
+          handleChange(text, "email");
         }}
       />
       <Text style={styles.text}>Phone Number</Text>
