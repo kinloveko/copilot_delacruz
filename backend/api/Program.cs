@@ -27,9 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    
+
 //frontend react => localhost:3000
 // app.UseCors(builder => builder
 //     .WithOrigins("http://localhost:3000", "http://localhost:19000") // Add the mobile app's origin
