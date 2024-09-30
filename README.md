@@ -4,8 +4,8 @@ This project is a demo application that includes a backend service built with AS
 
 ## Technologies Used
 
-- **Backend**: ASP.NET Core
-- **Frontend**: React Native
+- **Backend**: ASP.NET Core Web API
+- **Frontend**: React Native Expo
 - **Containerization**: Docker, Docker Compose
 - **HTTP Client**: Axios
 - **AutoMapper**: For object mapping in the backend
