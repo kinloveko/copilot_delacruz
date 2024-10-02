@@ -1,4 +1,4 @@
-# CopilotDemo Project ( Contact Management Project )
+# CopilotDemo Project ( Contact Management System )
 
 This project is a demo application that includes a backend service built with ASP.NET Core and a mobile frontend built with React Native. The project is containerized using Docker and managed with Docker Compose.
 
